@@ -12,7 +12,7 @@ class NubbinBattery(Battery):
 
     def needs_service(self):
         service_threshold = 365 * 4
-        return (self.current_date - self.last_service_date).days >= service_threshold
+        return (self.current_date - self.last_service_date).days > service_threshold
 
 
 class SpindlerBattery(Battery):
@@ -22,4 +22,4 @@ class SpindlerBattery(Battery):
 
     def needs_service(self):
         service_threshold = 365 * 2
-        return (self.current_date - self.last_service_date).days >= service_threshold
+        return (self.current_date - self.last_service_date).days > service_threshold
