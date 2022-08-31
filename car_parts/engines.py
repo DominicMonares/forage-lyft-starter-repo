@@ -1,8 +1,9 @@
-from car import Car
+from abc import ABC
 
 
-class Engine(Car):
-    pass
+class Engine(ABC):
+    def needs_service(self):
+        pass
 
 
 class CapuletEngine(Engine):
